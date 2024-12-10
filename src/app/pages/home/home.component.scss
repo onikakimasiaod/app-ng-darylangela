@@ -1,0 +1,36 @@
+
+$breakpoint-sm: 576px;
+$breakpoint-lg: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px; 
+
+.p-home {
+    $root-node: &;
+
+    &__sandbox {
+
+        &-image {
+            width: 100%;
+            aspect-ratio: auto;
+
+            @media (min-width: $breakpoint-xl) {
+                width: unset;
+
+                &:first-child {
+                    max-width: 40rem;
+                }
+                &:last-child {
+                    max-width: 35rem;
+                }
+            }
+        }
+
+        &-container {            
+            @media (min-width: $breakpoint-xl) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}

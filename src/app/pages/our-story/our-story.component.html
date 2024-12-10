@@ -1,0 +1,4 @@
+<div *ngIf="OUR_STORY as content" class="p-our-story">
+    <section-hero *ngIf="content.hero" [section]="content.hero"></section-hero>
+    <section-container-media *ngFor="let item of content.sandbox; let i = index" [section]="{item, i}" class="p-our-story__media"></section-container-media>
+</div>

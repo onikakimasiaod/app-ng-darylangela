@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --primary: #6e7f62;
+    --grey: #737373;
+    --s-header-mobile-height: 5rem;
+    --s-header-opaque-height: 9rem;
+}
+
+html, 
+body {
+    margin: 0;
+    padding: 0;
+}
+    
+.button {
+    border: none;
+    padding: 1rem 3rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: "Cinzel", serif;
+}
+
+.container {
+    margin: 0 auto;
+    padding-inline: 2rem;
+}

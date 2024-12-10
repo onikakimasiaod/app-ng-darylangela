@@ -1,0 +1,9 @@
+<div *ngIf="section" class="s-hero">
+    <div class="s-hero__container">
+        <img *ngIf="section.image" [src]="section.image" class="s-hero__image">
+        <div class="s-hero__content">
+            <span *ngFor="let item of section.text" class="s-hero__text">{{ item }}</span>
+        </div>
+        <a *ngIf="section.button as button" class="s-hero__button button" [href]="button.url">{{ button.text }}</a>
+    </div>
+</div>

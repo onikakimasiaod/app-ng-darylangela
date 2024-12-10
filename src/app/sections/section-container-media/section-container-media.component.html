@@ -1,0 +1,6 @@
+<div *ngIf="section" class="s-container-media">
+    <div class="s-container-media__container s-container-media__container--{{ section.i }} container">
+        <p *ngIf="section.item?.text as text" [innerHTML]="text" class="s-container-media__paragraph"></p>
+        <img *ngIf="section.item?.image" [src]="section.item.image" class="s-container-media__image">
+    </div>
+</div>
