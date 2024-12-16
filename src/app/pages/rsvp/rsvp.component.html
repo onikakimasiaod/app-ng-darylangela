@@ -1,0 +1,54 @@
+<div *ngIf="RSVP" class="p-rsvp">
+    <section-hero *ngIf="RSVP.hero" [section]="RSVP.hero"></section-hero>
+    <div class="p-rsvp__container">
+        <span *ngIf="RSVP.title" class="p-rsvp__title">{{ RSVP.title }}</span>
+        <form [formGroup]="rsvpForm" class="p-rsvp__form">
+            <div class="p-rsvp__form-gp">
+                <label>Guess Pass*</label>
+                <mat-form-field appearance="outline">
+                    <input matInput type="text" formControlName="guestPass">
+                </mat-form-field>
+                <span *ngIf="!isGuest() && rsvpForm.get('guestPass').touched" class="p-rsvp__form-span">Guest pass not valid</span>
+            </div>
+            <div class="p-rsvp__form-columns">
+            <div class="p-rsvp__form-column">
+                <label>First Name*</label>
+                <mat-form-field appearance="outline">
+                    <input matInput type="text" formControlName="first_name">
+                </mat-form-field>
+                <label>Last Name*</label>
+                <mat-form-field appearance="outline">
+                    <input matInput type="text" formControlName="last_name">
+                </mat-form-field>
+                <label>Phone No*</label>
+                <mat-form-field appearance="outline">
+                    <input matInput type="text" formControlName="phone_number">
+                </mat-form-field>
+            </div>
+            <div class="p-rsvp__form-column">
+                <label>Email*</label>
+                <mat-form-field appearance="outline">
+                    <input matInput type="email" formControlName="email">
+                    <mat-error *ngIf="rsvpForm.value.email">Invalid email</mat-error>
+                </mat-form-field>
+                <label>Other Info</label>
+                <mat-form-field appearance="outline" class="p-rsvp__form-text">
+                    <textarea matInput formControlName="comments" placeholder=""></textarea>
+                    <mat-hint>No. of total guests assigned to you; Dietry restrictions</mat-hint>
+                </mat-form-field>
+                </div>
+            </div>
+            <div class="p-rsvp__form-attendance">
+                <label>Will you be attending?*</label>
+                    <mat-radio-group class="p-rsvp__form-attendance-rb" aria-label="Select an option" formControlName="attendance">
+                        <mat-radio-button value="true">Yes</mat-radio-button>
+                        <mat-radio-button value="false">No</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+            <div class="p-rsvp__form-button">
+                <button class="button" [ngClass]="{'disabled-button': !isGuest && !rsvpForm.valid}" 
+                [disabled]="!isGuest && !rsvpForm.valid" (click)="submit()">SUBMIT</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,7 +1,8 @@
 <div *ngIf="HOME" clas="p-home">
     <section-hero *ngIf="HOME.hero as hero" [section]="hero"></section-hero>
-    <div *ngIf="HOME.sandbox as sandbox" class="p-home__sandbox">
-        <div class="p-home__sandbox-container container">
+    <div *ngIf="HOME.sandbox as sandbox" class="p-home__sandbox container">
+        <img *ngIf="HOME.timeline" [src]="HOME.timeline" class="p-home__timeline">
+        <div class="p-home__sandbox-container">
             <img *ngFor="let image of sandbox" [src]="image" class="p-home__sandbox-image">
         </div>
     </div>

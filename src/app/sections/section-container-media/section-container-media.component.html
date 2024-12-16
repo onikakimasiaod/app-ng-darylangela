@@ -1,6 +1,9 @@
 <div *ngIf="section" class="s-container-media">
     <div class="s-container-media__container s-container-media__container--{{ section.i }} container">
         <p *ngIf="section.item?.text as text" [innerHTML]="text" class="s-container-media__paragraph"></p>
-        <img *ngIf="section.item?.image" [src]="section.item.image" class="s-container-media__image">
+        <ng-container *ngFor="let image of section.item?.image">
+            <img *ngIf="image" [src]="image" class="s-container-media__image">
+        </ng-container>
+        <button *ngIf="section.item?.button?.text" class="s-container-media__button button" (click)="navigateToRsvp()">{{ section.item.button.text }}</button>
     </div>
 </div>

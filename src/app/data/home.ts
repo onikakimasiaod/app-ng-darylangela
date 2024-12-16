@@ -10,8 +10,10 @@ export const HOME = {
             url: 'our-story'
         }
     },
-    sandbox: [
-        '../../assets/timeline.png',
-        '../../assets/mosaic.png',
+    timeline: '../../assets/timeline.png',
+    sandbox: [  
+        '../../assets/home-sandbox-1.jpg',
+        '../../assets/home-sandbox-2.jpg',
+        '../../assets/home-sandbox-3.jpg',
     ],
 }

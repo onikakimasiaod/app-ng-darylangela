@@ -1,4 +1,4 @@
-<header class="s-header" [ngClass]="{'s-header--is-open': isOpen, 'opaque': !isScroll && !isOpen}">
+<header class="s-header" [ngClass]="{'s-header--is-open': isOpen, 'opaque': !isScroll && !isOpen && !isGuestInfo}">
     <div *ngIf="isMobileHeader; else desktopHeader" class="s-header__container">
         <button (click)="toggle()" class="s-header__burger">
             <i *ngIf="!isOpen" class="fa-solid fa-bars"></i>
@@ -8,7 +8,7 @@
         <div *ngIf="isOpen" class="s-header__menu">
             <a *ngFor="let item of HEADER.menu" [href]="item.url" class="s-header__item">{{ item.text }}</a>
         </div>
-        <button class="s-header__button button">RSVP</button>
+        <button *ngIf="HEADER.button" class="s-header__button button" (click)="navigateToRsvp()">{{ HEADER.button.text }}</button>
     </div>
     <ng-template #desktopHeader>
         <div class="s-header__container s-header--desktop">
@@ -16,7 +16,7 @@
                 <div class="s-header__links">
                     <a *ngFor="let item of HEADER.menu" [href]="item.url" class="s-header__item">{{ item.text }}</a>
                 </div>
-                <button class="s-header__button button">RSVP</button>
+                <button *ngIf="HEADER.button" class="s-header__button button" (click)="navigateToRsvp()">{{ HEADER.button.text }}</button>
             </div>
             <a href="/"><img [src]="LOGO" class="s-header__logo"></a>
         </div>

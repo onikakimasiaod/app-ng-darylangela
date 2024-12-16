@@ -1,27 +1,31 @@
 
 $breakpoint-sm: 576px;
-$breakpoint-lg: 768px;
+$breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px; 
 
 .p-home {
     $root-node: &;
 
+    &__timeline {
+        @media (min-width: $breakpoint-lg) {
+            max-height: 50rem;
+        }
+    }
+
     &__sandbox {
+        display: flex;
+        flex-direction: column;
+        @media (min-width: $breakpoint-lg) {
+            flex-direction: row;
+        }
 
         &-image {
             width: 100%;
             aspect-ratio: auto;
 
-            @media (min-width: $breakpoint-xl) {
-                width: unset;
-
-                &:first-child {
-                    max-width: 40rem;
-                }
-                &:last-child {
-                    max-width: 35rem;
-                }
+            @media (min-width: $breakpoint-lg) {
+                width: 20rem;
             }
         }
 
@@ -30,6 +34,8 @@ $breakpoint-xl: 1200px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                flex-direction: column;
+                gap: 1.5rem;
             }
         }
     }

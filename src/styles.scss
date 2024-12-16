@@ -17,9 +17,44 @@ body {
     border-radius: 0.5rem;
     font-size: 1rem;
     font-family: "Cinzel", serif;
+    cursor: pointer;
 }
 
 .container {
+    display: flex;
+    justify-content: center;
     margin: 0 auto;
     padding-inline: 2rem;
+    padding-block: 1rem;
+}
+
+.mat-mdc-text-field-wrapper {
+    background-color: white;
+    min-height: 2rem;
+    border-radius: 0.2rem !important;
+}
+
+.mdc-notched-outline .mdc-notched-outline__leading, .mdc-notched-outline .mdc-notched-outline__trailing {
+    border: none;
+}
+
+.mat-mdc-input-element {
+    min-height: 3rem;
+}
+
+.mat-mdc-form-field-hint {
+    color: white;
+    font-size: 0.625rem;
+}
+
+.mat-mdc-form-field-hint-spacer {
+    flex: unset !important;
+}
+
+.mat-mdc-form-field-hint-wrapper, .mat-mdc-form-field-error-wrapper {
+    padding: 0 !important;
+}
+
+.mat-mdc-form-field-error {
+    color: red;
 }

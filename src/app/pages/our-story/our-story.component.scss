@@ -1,0 +1,98 @@
+// $breakpoint-sm: 576px;
+// $breakpoint-md: 768px;
+// $breakpoint-l: 992px;
+// $breakpoint-xl: 1200px;
+// $breakpoint-xxl: 1400px;
+
+// .p-our-story {
+//     .s-container-media {
+//         $root-node: &;
+
+//         &__container {
+//             line-height: 2rem;
+//             flex-direction: column;
+       
+//         @media (min-width: $breakpoint-md) {
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;    
+//             gap: 3rem;   
+//         }
+
+//         @media (min-width: $breakpoint-xxl) {
+//             padding-inline: 20rem;
+//             padding-block: 2rem;
+//         }
+
+//         &--1 {
+//             gap: 2rem;
+//             @media (min-width: $breakpoint-md) {
+//                 flex-direction: row;
+//                 justify-content: space-between;
+
+//                 .s-container-media__image {
+//                     max-width: 20rem;
+//                 }
+//             }
+
+//             @media (min-width: $breakpoint-xxl) {
+//                 .s-container-media__image {
+//                     max-width: 32rem;
+//                 }
+//             }
+//         }
+
+//         &--2 {
+//             .s-container-media {
+//                 &__image {
+//                     max-width: unset;
+//                 }
+//             }
+//         }
+
+//         &--4, &--6 {
+//             .s-container-media {
+//                 &__image {
+//                     @media (min-width: $breakpoint-l) {
+//                         max-width: 25rem;
+//                     }
+//                 }
+//             }
+//         }
+
+//         &--4 {
+//             @media (min-width: $breakpoint-xxl) {
+//                 flex-direction: row-reverse;
+//             }
+//         }
+
+//         &--6 {
+//             @media (min-width: $breakpoint-xxl) {
+//                 flex-direction: row;
+//             }
+//         }
+
+//         &--7 {
+
+//             .s-container-media {
+//                 &__paragraph {
+//                     color: black;
+//                     text-align: center;
+//                     font-family: "Cinzel", serif;
+//                     font-size: 24px;
+//                 }
+//             }
+//         }
+//     }
+
+//     &__image {
+//         width: 100%;
+//         max-width: 32rem;
+//     }
+
+//     &__paragraph {
+//         font-family: "Montserrat", sans-serif;
+//         color: var(--primary);        
+//     }
+// }
+// }

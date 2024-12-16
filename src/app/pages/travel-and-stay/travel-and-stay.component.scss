@@ -1,0 +1,45 @@
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-l: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+
+.p-travel-stay {
+    font-family: "Montserrat", sans-serif;
+    &__container {
+        display: flex;
+    }
+
+    &__paragraphs {
+
+        @media (min-width: $breakpoint-md) {
+            display: flex;
+            justify-content: center;
+            gap: 10rem;
+        }
+    }
+
+    &__paragraph {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    &__title {
+        color: var(--primary);
+    }
+    
+    &__content {
+        color: var(--grey);
+        max-width: 25rem;
+    }
+
+    &__button {
+        background-color: var(--primary);
+        padding: 2rem;
+        text-decoration: none;
+        font-family: "Cinzel Decorative", serif;
+        color: white;
+        font-size: 24px;
+    }
+}

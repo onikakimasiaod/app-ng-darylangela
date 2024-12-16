@@ -1,0 +1,10 @@
+<div class="p-guest-info">
+    <div class="p-guest-info__container">
+        <img src="../../../assets/guest-title.png" class="p-guest-info__title">
+        <div class="p-guest-info__content">
+            <img *ngIf="!isMobile" src="../../../assets/bg-guest-info.png" class="p-guest-info__bg-image">
+            <img [src]="image" class="p-guest-info__image">
+            <img *ngIf="!isMobile" src="../../../assets/bg-guest-info.png" class="p-guest-info__bg-image">
+        </div>
+    </div>
+</div>

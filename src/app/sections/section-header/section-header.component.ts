@@ -1,9 +1,10 @@
 import { CommonModule, DOCUMENT, NgClass, NgFor, NgIf } from '@angular/common';
-import { Component, DestroyRef, Inject, OnDestroy } from '@angular/core';
+import { Component, DestroyRef, Inject, OnDestroy, inject } from '@angular/core';
 import { Header } from '../../data';
 import { BreakpointObserver } from '@angular/cdk/layout'
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Subject, fromEvent, takeUntil } from 'rxjs';
+import { NavigationService } from '../../services/navigation-service.service';
 
 @Component({
   selector: 'section-header',
@@ -34,10 +35,15 @@ export class SectionHeaderComponent implements OnDestroy {
 
   public isMobileHeader: boolean = false
 
+  public isGuestInfo: boolean = false
+
   private unsubscribe$ = new Subject<void>()
+
+  private readonly navigationService = inject(NavigationService)
 
   ngOnInit(): void {
     this.onScroll()
+    this.isGuestInfo = this.navigationService.isGuestInfo()
     this.breakpointService.observe(`(max-width: 820px)`)
     .pipe(takeUntilDestroyed(this.destroyRef))
     .subscribe(state => {
@@ -48,6 +54,10 @@ export class SectionHeaderComponent implements OnDestroy {
   ngOnDestroy(): void {
       this.unsubscribe$.next()
       this.unsubscribe$.complete()
+  }
+
+  public navigateToRsvp(): void {
+    this.navigationService.navigateTo('/rsvp')
   }
 
   public toggle(): void {

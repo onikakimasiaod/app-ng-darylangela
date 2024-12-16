@@ -1,0 +1,17 @@
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-l: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+
+.s-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Cinzel", serif;
+    color: white;
+    height: 2rem;
+    background-color: var(--primary);
+    overflow: auto;
+    font-size: 0.625rem;
+}

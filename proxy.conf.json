@@ -1,0 +1,8 @@
+{
+    "/api": {
+      "target": "https://darylangela.com/data/api",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    }
+  }

@@ -1,22 +1,26 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SectionHeaderComponent } from "./sections/section-header/section-header.component";
-import { OurStoryComponent } from './pages/our-story/our-story.component';
-import { SectionContainerMediaComponent } from './sections/section-container-media/section-container-media.component';
-import { HttpClientModule } from '@angular/common/http';
+import { SectionFooterComponent } from './sections/section-footer/section-footer.component';
+import { SectionHeaderComponent } from './sections/section-header/section-header.component';
+import { GuestInfoComponent } from './pages/guest-info/guest-info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    GuestInfoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SectionHeaderComponent,
+    SectionFooterComponent,
     HttpClientModule,
+    BrowserAnimationsModule,
 ],
   providers: [],
   bootstrap: [AppComponent]

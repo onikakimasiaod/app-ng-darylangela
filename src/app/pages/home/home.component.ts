@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SectionHeroComponent } from '../../sections/section-hero/section-hero.component';
 import { HOME } from '../../data/home';
 import { NgFor, NgIf } from '@angular/common';
@@ -16,5 +16,4 @@ import { NgFor, NgIf } from '@angular/common';
 })
 export class HomeComponent {
   public readonly HOME = HOME
-
 }

@@ -1,0 +1,14 @@
+<div *ngIf="TRAVEL_AND_STAY" class="p-travel-stay">    
+    <section-hero *ngIf="TRAVEL_AND_STAY.hero" [section]="TRAVEL_AND_STAY.hero"></section-hero>
+    <div class="p-travel-stay__container container">
+    <div class="p-travel-stay__paragraphs">
+        <div class="p-travel-stay__paragraph" *ngFor="let paragraph of TRAVEL_AND_STAY.paragraphs">
+                <h2 class="p-travel-stay__title">{{ paragraph.title }}</h2>
+                <p class="p-travel-stay__content">{{ paragraph.content }}</p>
+        </div>
+    </div>
+    </div>
+    <div class="container">
+        <a [href]="TRAVEL_AND_STAY.button.url" class="p-travel-stay__button button">{{ TRAVEL_AND_STAY.button.text }}</a>
+    </div>
+</div>

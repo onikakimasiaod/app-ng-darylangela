@@ -46,14 +46,13 @@
         color: white;
 
         span {
+            font-family: "Cinzel", serif;
             &:nth-child(1) {
                 font-size: 4rem;
-                font-family: "Cinzel", serif;
             }
 
             &:last-child {
                 font-size: 1.5rem;
-                font-family: "Public Sans", sans-serif;;
             }
         }
     }

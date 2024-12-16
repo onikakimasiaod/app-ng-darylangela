@@ -7,7 +7,6 @@ import { GuestsService } from './services/guests.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'app-ng-darylangela';
   
   private readonly guestsService = inject(GuestsService)
 
