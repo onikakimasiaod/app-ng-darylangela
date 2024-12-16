@@ -42,7 +42,6 @@ export class RsvpComponent implements OnInit {
   public submit(): void {
     if (this.isGuest()) {
       this.guestsService.postGuest(this.generateGuest()).subscribe(response => {
-        console.log(response)
         this.navigationService.navigateTo('/you-are-invited')
       })
     }

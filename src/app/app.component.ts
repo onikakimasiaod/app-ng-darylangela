@@ -1,16 +1,10 @@
-import { Component, OnInit, inject } from '@angular/core';
-import { GuestsService } from './services/guests.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
-  
-  private readonly guestsService = inject(GuestsService)
+export class AppComponent {
 
-  ngOnInit(): void {
-      this.guestsService.getGuests().subscribe(console.log)
-  }
 }
