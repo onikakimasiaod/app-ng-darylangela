@@ -1,0 +1,10 @@
+.p-thank-u {
+    background-color: #4d5741;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+
+    &__image {
+        max-width: 100%;
+    }
+}

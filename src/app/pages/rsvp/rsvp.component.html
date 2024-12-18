@@ -14,15 +14,15 @@
             <div class="p-rsvp__form-column">
                 <label>First Name*</label>
                 <mat-form-field appearance="outline">
-                    <input matInput type="text" formControlName="first_name">
+                    <input matInput type="text" formControlName="firstName">
                 </mat-form-field>
                 <label>Last Name*</label>
                 <mat-form-field appearance="outline">
-                    <input matInput type="text" formControlName="last_name">
+                    <input matInput type="text" formControlName="lastName">
                 </mat-form-field>
                 <label>Phone No*</label>
                 <mat-form-field appearance="outline">
-                    <input matInput type="text" formControlName="phone_number">
+                    <input matInput type="text" formControlName="phoneNumber">
                 </mat-form-field>
             </div>
             <div class="p-rsvp__form-column">
@@ -41,13 +41,14 @@
             <div class="p-rsvp__form-attendance">
                 <label>Will you be attending?*</label>
                     <mat-radio-group class="p-rsvp__form-attendance-rb" aria-label="Select an option" formControlName="attendance">
-                        <mat-radio-button value="true">Yes</mat-radio-button>
-                        <mat-radio-button value="false">No</mat-radio-button>
+                        <mat-radio-button [value]="true">Yes</mat-radio-button>
+                        <mat-radio-button [value]="false">No</mat-radio-button>
                     </mat-radio-group>
             </div>
             <div class="p-rsvp__form-button">
-                <button class="button" [ngClass]="{'disabled-button': !isGuest && !rsvpForm.valid}" 
-                [disabled]="!isGuest && !rsvpForm.valid" (click)="submit()">SUBMIT</button>
+                <button class="button" [ngClass]="{'disabled-button': !isValid || emailExists}" 
+                [disabled]="!isValid || emailExists" (click)="submit()">SUBMIT</button>
+                <span *ngIf="emailExists" class="p-rsvp__form-button-email">You are already in the guest list.</span>
             </div>
         </form>
     </div>

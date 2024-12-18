@@ -1,5 +1,13 @@
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px; 
+$breakpoint-xxl: 1400px;
+
 :root {
     --primary: #6e7f62;
+    --secondary: #bec8b8;
+    --tertiary: #4d5741;
     --grey: #737373;
     --s-header-mobile-height: 5rem;
     --s-header-opaque-height: 9rem;
@@ -9,6 +17,11 @@ html,
 body {
     margin: 0;
     padding: 0;
+}
+
+h1, h2 {
+    font-family: "Cinzel", serif;
+    color: white;
 }
     
 .button {

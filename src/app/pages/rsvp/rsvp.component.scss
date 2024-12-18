@@ -9,12 +9,14 @@ $breakpoint-xxl: 1400px;
     font-family: "Cinzel", serif;
 
     .disabled-button {
-        color: grey;
-
+        cursor: default;
+        opacity: 50%;
     }
     
     &__title, label {
-        color: white
+        color: white;
+        display: flex;
+        justify-content: center;
     }
 
     &__container {
@@ -44,6 +46,10 @@ $breakpoint-xxl: 1400px;
     @media (min-width: $breakpoint-md) {    
         
         &__container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
             padding-inline: 10rem;
             padding-block: 2rem;
         }
@@ -84,10 +90,17 @@ $breakpoint-xxl: 1400px;
         
         &-button {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
             
             button {
                 color: var(--primary)
+            }
+
+            &-email {
+                color: red;
+                font-weight: 700;
             }
         }
         

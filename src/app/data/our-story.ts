@@ -38,7 +38,7 @@ export const OUR_STORY = {
             chatting with the three friends I brought with me—but not me! I thought I must have seemed intimidating.</p>
 
             <p>The next day, out of the blue, he texted me. That conversation turned into many more, and now, almost six years later, we are getting married!</p>`,
-            image: ['../../assets/sandbox-3.jpg'],
+            image: ['../../assets/sandbox-3.jpg','../../assets/sandbox-4.jpg'],
         },
         {
             text: `<p>Our journey wasn't easy—long distance tested us in so many ways. But every challenge brought us closer to Jesus. </p>`

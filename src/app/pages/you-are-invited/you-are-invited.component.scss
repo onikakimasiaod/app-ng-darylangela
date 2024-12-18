@@ -5,6 +5,7 @@ $breakpoint-xl: 1200px;
 $breakpoint-xxl: 1400px;
 
 .p-you-are-invited {
+
     &__text {
         position: absolute;
         max-width: 20rem;
@@ -13,5 +14,15 @@ $breakpoint-xxl: 1400px;
         @media (min-width: $breakpoint-sm) {
             max-width: 35rem;
         }
+    }
+
+    &__button {
+        position: absolute;
+        bottom: 2rem;
+        left: 5rem;
+        border-radius: 2rem;
+        background-color: var(--secondary);
+        color: var(--tertiary);
+        font-weight: 700;
     }
 }

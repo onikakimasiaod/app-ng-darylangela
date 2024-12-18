@@ -12,10 +12,6 @@ export const Header = {
             text: 'Travel and stay',
             url: '/travel-and-stay'
         },
-        {
-            text: 'Guest info',
-            url: '/guest-info'
-        }
     ],
     button: {
         text: 'RSVP',

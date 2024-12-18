@@ -1,10 +1,16 @@
-<div class="p-guest-info">
-    <div class="p-guest-info__container">
-        <img src="../../../assets/guest-title.png" class="p-guest-info__title">
+<div *ngIf="GUEST_INFO as content" class="p-guest-info">
+    <div *ngIf="content.content" class="p-guest-info__container container">
+        <h1 class="p-guest-info__title">{{ content.title }}</h1>
         <div class="p-guest-info__content">
-            <img *ngIf="!isMobile" src="../../../assets/bg-guest-info.png" class="p-guest-info__bg-image">
-            <img [src]="image" class="p-guest-info__image">
-            <img *ngIf="!isMobile" src="../../../assets/bg-guest-info.png" class="p-guest-info__bg-image">
+            <div *ngFor="let item of content.content" class="p-guest-info__media">
+                <h2 class="p-guest-info__content-title">{{ item.title }}</h2>
+                <a *ngIf="item.link; else image" [href]="item.link" class="p-guest-info__link">
+                    <img [src]="item.image" class="p-guest-info__image">
+                </a>
+                <ng-template #image>
+                    <img [src]="item.image" class="p-guest-info__image">
+                </ng-template>
+            </div>
         </div>
     </div>
 </div>

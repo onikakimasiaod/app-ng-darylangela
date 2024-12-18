@@ -6,11 +6,16 @@ import { TravelAndStayComponent } from './pages/travel-and-stay/travel-and-stay.
 import { RsvpComponent } from './pages/rsvp/rsvp.component';
 import { YouAreInvitedComponent } from './pages/you-are-invited/you-are-invited.component';
 import { GuestInfoComponent } from './pages/guest-info/guest-info.component';
+import { ThankYouComponent } from './pages/thank-you/thank-you.component';
 
 const routes: Routes = [
   {
     path: 'rsvp',
     component: RsvpComponent,
+  },
+  {
+    path: 'thank-u',
+    component: ThankYouComponent,
   },
   {
     path: 'you-are-invited',

@@ -8,7 +8,7 @@
         <div *ngIf="isOpen" class="s-header__menu">
             <a *ngFor="let item of HEADER.menu" [href]="item.url" class="s-header__item">{{ item.text }}</a>
         </div>
-        <button *ngIf="HEADER.button" class="s-header__button button" (click)="navigateToRsvp()">{{ HEADER.button.text }}</button>
+        <button *ngIf="HEADER.button" class="s-header__button button" (click)="navigateToRsvp(); toggle()">{{ HEADER.button.text }}</button>
     </div>
     <ng-template #desktopHeader>
         <div class="s-header__container s-header--desktop">

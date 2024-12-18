@@ -1,6 +1,6 @@
 export const RSVP = {
     hero: {
-        image: '../../assets/rsvp-hero.jpg',
+        image: '../../assets/hero-rsvp.jpg',
         text: [
             'Daryl & Angela',
             'RSVP',
