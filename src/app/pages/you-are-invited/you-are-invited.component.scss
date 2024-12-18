@@ -15,10 +15,11 @@
     &__button {
         position: absolute;
         bottom: 2rem;
-        left: 5rem;
         border-radius: 2rem;
         background-color: var(--secondary);
         color: var(--tertiary);
         font-weight: 700;
+        left: 5%;
+        
     }
 }

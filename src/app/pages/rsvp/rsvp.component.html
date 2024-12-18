@@ -34,7 +34,7 @@
                 <label>Other Info</label>
                 <mat-form-field appearance="outline" class="p-rsvp__form-text">
                     <textarea matInput formControlName="comments" placeholder=""></textarea>
-                    <mat-hint>No. of total guests assigned to you; Dietry restrictions</mat-hint>
+                    <mat-hint>Names of total guests assigned to you; Dietry restrictions</mat-hint>
                 </mat-form-field>
                 </div>
             </div>
@@ -48,7 +48,7 @@
             <div class="p-rsvp__form-button">
                 <button class="button" [ngClass]="{'disabled-button': !isValid || emailExists}" 
                 [disabled]="!isValid || emailExists" (click)="submit()">SUBMIT</button>
-                <span *ngIf="emailExists" class="p-rsvp__form-button-email">You are already in the guest list.</span>
+                <span *ngIf="emailExists" class="p-rsvp__form-button-email">This email is already registered</span>
             </div>
         </form>
     </div>
