@@ -1,8 +1,4 @@
-$breakpoint-sm: 576px;
-$breakpoint-md: 768px;
-$breakpoint-l: 992px;
-$breakpoint-xl: 1200px;
-$breakpoint-xxl: 1400px;
+@import '../../../styles.scss';
 
 .p-rsvp {
     background-color: var(--primary);
@@ -33,6 +29,22 @@ $breakpoint-xxl: 1400px;
             flex-direction: column;
         }
 
+        &-button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+
+            button {
+                color: var(--primary)
+            }
+            
+            &-email {
+                color: red;
+                font-weight: 700;
+            }
+        }
+
         &-attendance {
             display: flex;
             flex-direction: column;
@@ -41,6 +53,12 @@ $breakpoint-xxl: 1400px;
                 color: white;
             }
         }
+
+        &-span {
+            margin-top: -1rem;
+            color: red;
+        }
+        
     }
 
     @media (min-width: $breakpoint-md) {    
@@ -70,11 +88,6 @@ $breakpoint-xxl: 1400px;
                 flex-direction: column;
             }
 
-            &-span {
-                margin-top: -1rem;
-                color: red;
-            }
-            
             &-gp {
                 display: flex;
                 justify-content: center;
@@ -86,22 +99,6 @@ $breakpoint-xxl: 1400px;
             display: flex;
             flex-direction: column;
             align-items: center;
-        }
-        
-        &-button {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-            
-            button {
-                color: var(--primary)
-            }
-
-            &-email {
-                color: red;
-                font-weight: 700;
-            }
         }
         
         &-text {
